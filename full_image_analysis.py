@@ -43,12 +43,12 @@ clusters = fcluster(linked, max_d, criterion='distance')
     
 df['cluster'] = clusters
 
-labelList = newlist
+labelList = ['' for i in range(0,138)]
 
 plt.figure(figsize=(10, 7))  
 dendrogram(linked,  
             orientation='right',
-            labels=labelList,
+            labels = labelList,
             distance_sort='descending',
             show_leaf_counts=True,
             show_contracted=True,
